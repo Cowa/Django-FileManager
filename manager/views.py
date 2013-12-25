@@ -1,4 +1,9 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def index(request):
-	return HttpResponse("World Lord")
+	context = {'title': "Test Ditle"}
+	return render(request, 'manager/index.html', context)
+
+def test(request):
+	context = {'title': "Test not Ditle"}
+	return render(request, 'manager/index.html', context)
