@@ -1,0 +1,30 @@
+{% extends "manager/base.html" %}
+{% block title %} Specialized Title !{% endblock %}
+
+{% block body %}
+<div id="file_manager">
+	<header><h1>{{path}}</h1></header>
+	<section>
+		<ul id="side-panel">
+			{% for item in shortcuts %}
+			<li><a href="#">{{item}}</a></li>
+			{% endfor %}
+		</ul>
+		<div id="content">
+			{% for folder in subfolders %}
+			<div class="folder">
+				<p>{{folder}}</p>
+			</div>
+			{% endfor %}
+			{% for file in files %}
+			<div class="file">
+				<p>{{file}}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+	<footer>
+		<p>{{subfolders.size + files.size}} éléments</p>
+	</footer>
+</div>
+{% endblock %}
