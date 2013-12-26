@@ -4,5 +4,5 @@ from manager import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
-    url(r'^test/$', views.test, name='test')
+    url(r'^(?P<folder_id>\d+)/$', views.test, name='test')
 )

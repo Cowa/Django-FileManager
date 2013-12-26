@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from manager.models import Folder
 
 def index(request):
-	context = {'title': "Test Ditle"}
+	context = {'path': "/"}
 	return render(request, 'manager/folder.html', context)
 
-def test(request):
-	context = {'title': "Test not Ditle"}
-	return render(request, 'manager/index.html', context)
+def test(request, folder_id):
+	folder = get_object_or_404(Folder, pk=folder_id)
+	context = {'path': folder}
+	return render(request, 'manager/folder.html', context)
