@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="style.css" />
-		<title>{{title}}</title>
-	</head>
-	<body>
-		<h1>Mein Test</h1>
-	</body>
-</html>
+{% extends "manager/base.html" %}
+{% block title %} Specialized Title !{% endblock %}
+
+{% block header %} Header overwritten {% endblock %}
+
+{% block sidepanel %}
+<ul>
+	<li>Azerty</li>
+	<li>Qwerty</li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<p> Some content, or not. </p>
+{% endblock %}
+
+{% block footer %}
+<p>Shimering silver ship.</p>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{% block css %}style.css{% endblock %}" />
+		<title>{% block title %} Major Title ! {% endblock %}</title>
+	</head>
+	<body>
+		<header>{% block header %} Header {% endblock %}</header>
+		<nav>
+			{% block sidepanel %}
+			<ul>
+				<li>sidepanel</li>
+			</ul>
+			{% endblock %}
+		</nav>
+		<content>
+			{% block content %}
+			{% endblock %}
+		</content>
+		<footer>
+			{% block footer %} {% endblock %}
+		</footer>
+	</body>
+</html>
