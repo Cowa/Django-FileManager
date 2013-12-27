@@ -1,5 +1,5 @@
 {% extends "manager/base.html" %}
-{% block title %} Specialized Title !{% endblock %}
+{% block title %} Title  {% endblock %}
 
 {% block body %}
 <div id="file_manager">
@@ -30,7 +30,7 @@
 		</div>
 	</section>
 	<footer>
-		<p>X éléments</p>
+	<p>{{nb_items}} {% if nb_items > 1 %}items{% else %}item{% endif %}, <strong>free space</strong> : 806,3 To</p>
 	</footer>
 </div>
 {% endblock %}

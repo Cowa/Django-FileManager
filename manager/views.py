@@ -13,5 +13,6 @@ def folder(request, folder_id):
 	shortcuts_folder = ShortcutFolder.objects.all()
 	shortcuts_file = ShortcutFile.objects.all()
 	shortcuts_link = ShortcutLink.objects.all()
-	context = {'path': folder, 'subfolders': subfolders, 'files': files, 'shortcuts_folder': shortcuts_folder, 'shortcuts_file': shortcuts_file, 'shortcuts_link': shortcuts_link}
+	nb_items = len(subfolders) + len(files)
+	context = {'path': folder, 'subfolders': subfolders, 'files': files, 'shortcuts_folder': shortcuts_folder, 'shortcuts_file': shortcuts_file, 'shortcuts_link': shortcuts_link, 'nb_items': nb_items}
 	return render(request, 'manager/folder.html', context)
