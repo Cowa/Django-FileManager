@@ -1,0 +1,104 @@
+
+body
+{
+	font-family: Arial;
+	background-image: url(img/bg.jpg);
+}
+/* L'ensemble du gestionnaire de fichiers */
+#file_manager
+{
+	width: 560px;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 10px 10px #888;
+}
+/* Décoration de l'entete de la fenetre*/
+header
+{
+	background-color: #5EAA63;
+	border: 2px solid #232323;
+	text-align: center;
+	height: 30px;
+}
+/* Placement des boutons de la fenetre */
+#window_ctrl
+{
+	position: absolute;
+	margin-top: -24px;
+	margin-left: 480px;
+}
+/* Nom du dossier courant */
+h1
+{
+	font-size: 17px;
+	margin-top: 5px;
+}
+a
+{
+	color: #232323;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #5EAA63;
+}
+section
+{
+	margin-top: -2px;
+	background-color: white;
+	border: 2px solid #232323;
+}
+footer
+{
+	height: 15px;
+	margin-top: -2px;
+	background-color: #232323;
+	border: 2px solid #232323;	
+}
+footer p
+{
+	color: white;
+	font-size: 12px;
+	margin-top: 0px;
+	margin-left: 330px;
+}
+footer p strong
+{
+	color: #5EAA63;
+}
+/* Contenu (dossiers, fichiers) du dossier courant */
+#content
+{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: auto;
+	margin-left: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#content td
+{
+	font-size: 14px;
+	padding: 10px;
+	text-align: center;
+}
+/* Panneau latéral */
+#side-panel
+{
+	display: inline-block;
+	vertical-align: top;
+	list-style-type: none;
+	border: 2px solid #232323;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	margin: 0px;
+	width: 110px;
+	height: 368px;
+	/*height: ;*/
+	padding: 4px;
+	padding-top: 10px;
+}
