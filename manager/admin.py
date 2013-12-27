@@ -1,5 +1,5 @@
 from django.contrib import admin
-from manager.models import Folder, File
+from manager.models import Folder, File, ShortcutFolder, ShortcutFile, ShortcutLink
 
 class FileInline(admin.StackedInline):
 	model = File
@@ -13,4 +13,6 @@ class FolderAdmin(admin.ModelAdmin):
 	inlines = [FileInline]
 
 admin.site.register(Folder, FolderAdmin)
-
+admin.site.register(ShortcutFolder)
+admin.site.register(ShortcutFile)
+admin.site.register(ShortcutLink)

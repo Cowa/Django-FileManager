@@ -24,3 +24,22 @@ class File(models.Model):
 
 	def __unicode__(self):
 		return self.name
+
+class ShortcutFolder(models.Model):
+	folder = models.ForeignKey(Folder)
+
+	def __unicode__(self):
+		return self.folder.name
+
+class ShortcutFile(models.Model):
+	file = models.ForeignKey(File)
+
+	def __unicode__(self):
+		return self.file.name
+
+class ShortcutLink(models.Model):
+	name = models.CharField(max_length=30)
+	link = models.CharField(max_length=150)
+
+	def __unicode__(self):
+		return self.name

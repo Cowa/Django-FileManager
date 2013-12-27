@@ -6,8 +6,14 @@
 	<header><h1>{{path}}</h1></header>
 	<section>
 		<ul id="side-panel">
-			{% for item in shortcuts %}
+			{% for item in shortcuts_folder %}
+			<li><a href="/{{item.folder.id}}">{{item}}</a></li>
+			{% endfor %}
+			{% for item in shortcuts_file %}
 			<li><a href="#">{{item}}</a></li>
+			{% endfor %}
+			{% for item in shortcuts_link %}
+			<li><a href="{{item.link}}" target="_blank">{{item}}</a></li>
 			{% endfor %}
 		</ul>
 		<div id="content">

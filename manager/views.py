@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from manager.models import Folder, File
+from manager.models import Folder, File, ShortcutFolder, ShortcutFile, ShortcutLink
 
 def index(request):
 	# Get the root (must be unique or error)
@@ -10,5 +10,8 @@ def folder(request, folder_id):
 	folder = get_object_or_404(Folder, pk=folder_id)
 	subfolders = Folder.objects.all().filter(parent=folder_id)
 	files = File.objects.all().filter(folder=folder_id)
-	context = {'path': folder, 'subfolders': subfolders, 'files': files}
+	shortcuts_folder = ShortcutFolder.objects.all()
+	shortcuts_file = ShortcutFile.objects.all()
+	shortcuts_link = ShortcutLink.objects.all()
+	context = {'path': folder, 'subfolders': subfolders, 'files': files, 'shortcuts_folder': shortcuts_folder, 'shortcuts_file': shortcuts_file, 'shortcuts_link': shortcuts_link}
 	return render(request, 'manager/folder.html', context)
