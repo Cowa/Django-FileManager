@@ -13,12 +13,12 @@
 		<div id="content">
 			{% for folder in subfolders %}
 			<div class="folder">
-				<p>{{folder}}</p>
+				<a href="/{{folder.id}}">{{folder}}</a>
 			</div>
 			{% endfor %}
 			{% for file in files %}
 			<div class="file">
-				<p>{{file}}</p>
+				<a href="#">{{file}}</a>
 			</div>
 			{% endfor %}
 		</div>

@@ -1,8 +1,9 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="{% block css %}style.css{% endblock %}" />
+		<link rel="stylesheet" href="{% static 'manager/style.css' %}" />
 		<title>{% block title %} Base Title {% endblock %}</title>
 	</head>
 	<body>
