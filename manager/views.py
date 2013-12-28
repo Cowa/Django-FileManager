@@ -19,7 +19,7 @@ def folder(request, folder_id):
 	# No do-while in Python :(
 	while (folder.parent != None):
 		path = "/" + folder.name + path
-		folder = Folder.objects.get(pk=folder.parent.id)
+		folder = folder.parent
 	path = "/" + folder.name + path
 
 	context = {'path': path, 'subfolders': subfolders, 'files': files, 'shortcuts_folder': shortcuts_folder, 'shortcuts_file': shortcuts_file, 'shortcuts_link': shortcuts_link, 'nb_items': nb_items}

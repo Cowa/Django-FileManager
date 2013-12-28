@@ -1,4 +1,5 @@
 {% extends "manager/base.html" %}
+{% load staticfiles  %}
 {% block title %} Title  {% endblock %}
 
 {% block body %}
@@ -7,25 +8,25 @@
 	<section>
 		<ul id="side-panel">
 			{% for item in shortcuts_folder %}
-			<li><a href="/{{item.folder.id}}">{{item}}</a></li>
+			<li><img src="{% static "manager/images/folder_min.png" %}" alt=""/><a href="/{{item.folder.id}}">{{item}}</a></li>
 			{% endfor %}
 			{% for item in shortcuts_file %}
-			<li><a href="#">{{item}}</a></li>
+			<li><img src="{% static "manager/images/file_min.png" %}" alt=""/><a href="#">{{item}}</a></li>
 			{% endfor %}
 			{% for item in shortcuts_link %}
-			<li><a href="{{item.link}}" target="_blank">{{item}}</a></li>
+			<li><img src="{% static "manager/images/file_min.png" %}" alt=""/><a href="{{item.link}}" target="_blank">{{item}}</a></li>
 			{% endfor %}
 		</ul>
 		<div id="content">
 			{% for folder in subfolders %}
-			<div class="folder">
+			<span class="folder">
 				<a href="/{{folder.id}}">{{folder}}</a>
-			</div>
+			</span>
 			{% endfor %}
 			{% for file in files %}
-			<div class="file">
+			<span class="file">
 				<a href="#">{{file}}</a>
-			</div>
+			</span>
 			{% endfor %}
 		</div>
 	</section>

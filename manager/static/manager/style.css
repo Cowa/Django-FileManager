@@ -6,7 +6,7 @@ body
 /* All the file manager  */
 #file_manager
 {
-	width: 560px;
+	min-width: 360px;
 	margin-top: 5%;
 	margin-left: auto;
 	margin-right: auto;
@@ -15,7 +15,7 @@ body
 /* Top window */
 header
 {
-	background-color: #5EAA63;
+	background-color: #4867AB;
 	border: 2px solid #232323;
 	text-align: center;
 	height: 30px;
@@ -41,7 +41,7 @@ a
 }
 a:hover
 {
-	color: #5EAA63;
+	color: #4867AB;
 }
 section
 {
@@ -65,7 +65,7 @@ footer p
 }
 footer p strong
 {
-	color: #5EAA63;
+	color: #4867AB;
 }
 /* Content of the current folder (subfolders & files) */
 #content
@@ -77,12 +77,12 @@ footer p strong
 	margin-left: 50px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	min-height: 300px;
+	min-width: 150px;
 }
-#content td
+.folder, .file
 {
-	font-size: 14px;
-	padding: 10px;
-	text-align: center;
+	display: inline-block;
 }
 /* Sidepanel, shortcuts */
 #side-panel
@@ -95,8 +95,8 @@ footer p strong
 	border-bottom-style: none;
 	border-left-style: none;
 	margin: 0px;
-	width: 110px;
-	height: 368px;
+	min-width: 110px;
+	min-height: 368px;
 	/*height: ;*/
 	padding: 4px;
 	padding-top: 10px;
