@@ -83,6 +83,7 @@ footer p strong
 .folder, .file
 {
 	display: inline-block;
+	text-align: center;
 }
 /* Sidepanel, shortcuts */
 #side-panel

@@ -20,12 +20,12 @@
 		<div id="content">
 			{% for folder in subfolders %}
 			<span class="folder">
-				<a href="/{{folder.id}}">{{folder}}</a>
+				<a href="/{{folder.id}}"><img src="{% static "manager/images/folder.png" %}" alt=""/></br>{{folder}}</a>
 			</span>
 			{% endfor %}
 			{% for file in files %}
 			<span class="file">
-				<a href="#">{{file}}</a>
+				<a href="#"><img src="{% static "manager/images/file.png" %}" alt=""/></br>{{file}}</a>
 			</span>
 			{% endfor %}
 		</div>
