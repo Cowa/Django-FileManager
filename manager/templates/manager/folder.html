@@ -17,17 +17,19 @@
 			<li><img src="{% static "manager/images/file_min.png" %}" alt=""/><a href="{{item.link}}" target="_blank">{{item}}</a></li>
 			{% endfor %}
 		</ul>
-		<div id="content">
-			{% for folder in subfolders %}
-			<span class="folder">
-				<a href="/{{folder.id}}"><img src="{% static "manager/images/folder.png" %}" alt=""/></br>{{folder}}</a>
-			</span>
-			{% endfor %}
-			{% for file in files %}
-			<span class="file">
-				<a href="#"><img src="{% static "manager/images/file.png" %}" alt=""/></br>{{file}}</a>
-			</span>
-			{% endfor %}
+			<div id="content">
+				<ul>
+				{% for folder in subfolders %}
+				<li>
+					<a href="/{{folder.id}}"><img src="{% static "manager/images/folder.png" %}" alt=""/><br/>{{folder}}</a>
+				</li>
+				{% endfor %}
+				{% for file in files %}
+				<li>
+					<a href="#"><img src="{% static "manager/images/file.png" %}" alt=""/><br/>{{file}}</a>
+				</li>
+				{% endfor %}
+			</ul>
 		</div>
 	</section>
 	<footer>

@@ -72,18 +72,19 @@ footer p strong
 {
 	display: inline-block;
 	vertical-align: top;
-	position: relative;
-	margin: auto;
-	margin-left: 50px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	min-height: 300px;
-	min-width: 150px;
+	margin-top: 5px;
 }
-.folder, .file
+#content ul
+{
+	list-style-type: none;
+}
+#content ul li
 {
 	display: inline-block;
 	text-align: center;
+}
+.folder, .file
+{
 }
 /* Sidepanel, shortcuts */
 #side-panel
@@ -98,7 +99,6 @@ footer p strong
 	margin: 0px;
 	min-width: 110px;
 	min-height: 368px;
-	/*height: ;*/
 	padding: 4px;
 	padding-top: 10px;
 }
