@@ -90,7 +90,6 @@ footer p strong
 #side-panel
 {
 	display: inline-block;
-	vertical-align: top;
 	list-style-type: none;
 	border: 2px solid #232323;
 	border-top-style: none;
