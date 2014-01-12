@@ -14,7 +14,7 @@
 			<li><img src="{% static "manager/images/file_min.png" %}" alt=""/><a href="#">{{item}}</a></li>
 			{% endfor %}
 			{% for item in shortcuts_link %}
-			<li><img src="{% static "manager/images/file_min.png" %}" alt=""/><a href="{{item.link}}" target="_blank">{{item}}</a></li>
+			<li><img src="{% static "manager/images/file_min.png" %}" alt=""/><a href="{{item.link.link}}" target="_blank">{{item}}</a></li>
 			{% endfor %}
 		</ul>
 			<div id="content">
@@ -27,6 +27,11 @@
 				{% for file in files %}
 				<li>
 					<a href="#"><img src="{% static "manager/images/file.png" %}" alt=""/><br/>{{file}}</a>
+				</li>
+				{% endfor %}
+				{% for link in links %}
+				<li>
+				<a href="{{link.link}}" target="_blank"><img src="{% static "manager/images/file.png" %}" alt=""/><br/>{{link}}</a>
 				</li>
 				{% endfor %}
 			</ul>

@@ -25,6 +25,18 @@ class File(models.Model):
 	def __unicode__(self):
 		return self.name
 
+class FileLink(models.Model):
+	name = models.CharField(max_length=30)
+	link = models.CharField(max_length=150)
+	# File link's folder
+	folder = models.ForeignKey(Folder)
+
+	class Meta:
+		unique_together = ("name", "folder")
+
+	def __unicode__(self):
+		return self.name
+
 class ShortcutFolder(models.Model):
 	folder = models.ForeignKey(Folder)
 
@@ -38,8 +50,7 @@ class ShortcutFile(models.Model):
 		return self.file.name
 
 class ShortcutLink(models.Model):
-	name = models.CharField(max_length=30)
-	link = models.CharField(max_length=150)
+	link = models.ForeignKey(FileLink)
 
 	def __unicode__(self):
-		return self.name
+		return self.link.name
