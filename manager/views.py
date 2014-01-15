@@ -14,7 +14,7 @@ def folder(request, folder_id):
 	shortcuts_folder = ShortcutFolder.objects.all()
 	shortcuts_file = ShortcutFile.objects.all()
 	shortcuts_link = ShortcutLink.objects.all()
-	nb_items = len(subfolders) + len(files)
+	nb_items = len(subfolders) + len(files) + len(links)
 	
 	path = ""
 	# No do-while in Python :(
