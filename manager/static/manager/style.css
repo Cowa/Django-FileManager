@@ -1,15 +1,23 @@
+/*
+ * /!\ Info /!\
+ * This CSS was meant to be customized
+ * I designed it to be as simple as possible and quite flexible
+ */
+
 body
 {
 	font-family: Arial;
 	background: gray;
 }
-/* All the file manager  */
+/* File manager behavior (size & position) */
 #file_manager
 {
 	min-width: 360px;
+	max-width: 750px;
 	margin-top: 5%;
 	margin-left: auto;
 	margin-right: auto;
+	/* Shadow looks nice, you should try */
 	/*box-shadow: 0 0 10px 10px #888;*/
 }
 /* Top window */
@@ -20,14 +28,8 @@ header
 	text-align: center;
 	height: 30px;
 }
-/* Window's control  */
-#window_ctrl
-{
-	position: absolute;
-	margin-top: -24px;
-	margin-left: 480px;
-}
-/* Current folder's name */
+
+/* Current path */
 h1
 {
 	font-size: 17px;
@@ -67,6 +69,7 @@ footer p strong
 {
 	color: #4867AB;
 }
+
 /* Content of the current folder (subfolders & files) */
 #content
 {
@@ -84,9 +87,7 @@ footer p strong
 	display: inline-block;
 	text-align: center;
 }
-.folder, .file
-{
-}
+
 /* Sidepanel, shortcuts */
 #side-panel
 {
