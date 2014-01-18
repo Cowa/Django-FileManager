@@ -14,7 +14,7 @@ class Folder(models.Model):
 
 class File(models.Model):
 	name = models.CharField(max_length=30)
-	content = models.FileField(upload_to='files')
+	content = models.FileField(upload_to='.')
 	# File's folder
 	folder = models.ForeignKey(Folder)
 
