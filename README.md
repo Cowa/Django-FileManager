@@ -1,6 +1,6 @@
 Django-FileManager
 ==================
-**Progress: 83%**
+**Progress: 95%**
 
 *Django web-application designed like a file manager*
 

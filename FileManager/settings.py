@@ -52,7 +52,7 @@ USE_TZ = True
 ##### EDIT WITH YOUR OWN PATH (DEBUG ONLY, in local dev server) #####
 #####################################################################
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-MEDIA_ROOT = '/home/brice/Programmation/Django-FileManager/files'
+MEDIA_ROOT = '/home/brice/Programmation/Django-FileManager/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
