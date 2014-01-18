@@ -48,9 +48,11 @@ USE_L10N = True
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
+#####################################################################
+##### EDIT WITH YOUR OWN PATH (DEBUG ONLY, in local dev server) #####
+#####################################################################
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = '/home/brice/Programmation/Django-FileManager/files'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
