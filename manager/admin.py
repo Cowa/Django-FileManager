@@ -17,6 +17,7 @@ class FolderAdmin(admin.ModelAdmin):
 	inlines = [FileInline, FileLinkInline]
 
 admin.site.register(Folder, FolderAdmin)
+admin.site.register(File)
 admin.site.register(ShortcutFolder)
 admin.site.register(ShortcutFile)
 admin.site.register(ShortcutLink)

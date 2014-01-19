@@ -10,5 +10,4 @@ urlpatterns = patterns('',
     url(r'^(?P<folder_id>\d+)/$', views.folder, name='folder')
 )	
 if settings.DEBUG:
-	urlpatterns += patterns('', (r'^files/(?P<path>.*)$', 'django.views.static.serve', { 'document_root': settings.MEDIA_ROOT}))
-
+	urlpatterns += patterns('', (r'^media/(?P<path>.*)$', 'django.views.static.serve', { 'document_root': settings.MEDIA_URL}))	

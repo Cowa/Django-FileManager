@@ -1,8 +1,6 @@
 Django-FileManager
 ==================
-**Progress: 98%**
-
-*Django web-application designed like a file manager*
+**Progress: 100%**
 
 A (very) tiny, kind of CMS to create your own personnal site with a file manager behavior
 
@@ -10,7 +8,7 @@ Written in Python by Brice Thomas, 2014
 
 A quick look
 ------------
-With the default CSS designed to be as simple as possible and flexible
+The default CSS is designed to be as simple as possible and flexible
 
 Very easy to customize but a basic CSS knowledge is required
 

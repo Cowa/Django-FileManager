@@ -26,7 +26,7 @@
 				{% endfor %}
 				{% for file in files %}
 				<li>
-				<a href="{{file.content.url}}" class="file fancybox.iframe"><img src="{% static "manager/images/file.png" %}" alt=""/><br/>{{file}}</a>
+				<a href="/{{file.content.url}}" class="file fancybox.iframe"><img src="{% static "manager/images/file.png" %}" alt=""/><br/>{{file}}</a>
 				</li>
 				{% endfor %}
 				{% for link in links %}
